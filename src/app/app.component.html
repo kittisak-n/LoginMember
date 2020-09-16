@@ -1,22 +1,25 @@
-<mat-toolbar color="primary">
-    <!-- <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button> -->
-    <span>title</span>
-    <div class="spacer"></div>
-    <!-- <button mat-button>สมัครสมาชิก</button>
-    <button mat-button>เข้าสู่ระบบ</button> -->
-</mat-toolbar>
-<mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="side">
-        <mat-selection-list #shoes [multiple]="false">
-            <mat-list-option *ngFor="let item of menu" [value]="menu">
-                <mat-icon mat-list-icon>folder</mat-icon>
-                {{item.name}}
-            </mat-list-option>
-        </mat-selection-list>
-    </mat-drawer>
+<mat-sidenav-container>
 
-    <router-outlet></router-outlet>
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <div *ngFor="let item of menu">
+                <a mat-list-item [routerLink]="'/accounts'"> {{item.name}} </a>
+            </div>
 
-</mat-drawer-container>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="app-toolbar">
+            <button (click)="sidenav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+              <mat-icon>menu</mat-icon>
+            </button>
+            <span>title</span>
+            <div class="spacer"></div>
+            <button mat-button>สมัครสมาชิก</button>
+            <button mat-button>เข้าสู่ระบบ</button>
+        </mat-toolbar>
+        <div style="height: 100%;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

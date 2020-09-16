@@ -286,7 +286,7 @@ svg#clouds {
 
 .container {
     width: 100%;
-    height: 93%;
+    height: 100%;
     max-width: 100% !important;
 }
 
@@ -295,4 +295,24 @@ svg#clouds {
     height: 100%;
     align-items: center;
     justify-content: center;
+}
+
+mat-toolbar {
+    height: 64px;
+    position: fixed;
+    z-index: 100;
+    width: 100% !important;
+    .app-toolbar {
+        position: sticky;
+        position: -webkit-sticky;
+        /* For macOS/iOS Safari */
+        top: 0;
+        /* Sets the sticky toolbar to be on top */
+        z-index: 1000;
+        /* Ensure that your app's content doesn't overlap the toolbar */
+    }
+}
+
+.mat-list-item {
+    width: 300px !important;
 }

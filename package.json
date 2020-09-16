@@ -24,6 +24,7 @@
     "@material/checkbox": "^7.0.0",
     "@material/menu": "^7.0.0",
     "angular-material": "^1.2.0",
+    "crypto-js": "^4.0.0",
     "mat-sidenav-menu": "^0.10.1",
     "material-design-icons": "^3.0.1",
     "materialize-css": "^1.0.0-rc.2",
