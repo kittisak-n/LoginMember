@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'LoginMember';
+  showFiller = false;
+  menu = [
+    {
+      icon: "",
+      name: "เข้าสู่ระบบ"
+    }, {
+      icon: "",
+      name: "สมัครสมาชิก"
+    }
+  ];
 }
