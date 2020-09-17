@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserComponentService } from './service/user/user-component.service';
 
 
 
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+
   showFiller = false;
   menu = [
     {
@@ -19,4 +22,11 @@ export class AppComponent {
     }
   ];
 
+  constructor(
+    private userComponent: UserComponentService
+  ) { }
+
+  checkUser(): boolean {
+    return false;
+  }
 }

@@ -10,13 +10,13 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar class="app-toolbar">
-            <button (click)="sidenav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <button *ngIf="checkUser()" (click)="sidenav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
               <mat-icon>menu</mat-icon>
             </button>
             <span>title</span>
             <div class="spacer"></div>
-            <button mat-button>สมัครสมาชิก</button>
-            <button mat-button>เข้าสู่ระบบ</button>
+            <!-- <button mat-button>สมัครสมาชิก</button>
+            <button mat-button>เข้าสู่ระบบ</button> -->
         </mat-toolbar>
         <div style="height: 100%;">
             <router-outlet></router-outlet>
