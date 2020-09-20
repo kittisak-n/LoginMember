@@ -8,17 +8,17 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="user_id" type="text" class="validate" placeholder="ชื่อผู้ใช้หรืออีเมล">
+                        <input [(ngModel)]="text_name" id="text_name" name="text_name" type="text" class="validate" placeholder="ชื่อผู้ใช้หรืออีเมล">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s12 center">
-                        <a class="waves-effect waves-light btn" [routerLink]="['/user/chenge']">ดำเนินการต่อ</a>
+                        <a class="waves-effect waves-light btn" (click)="Verify()">ดำเนินการต่อ</a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col s12 center">
-                        <a class="waves-effect waves-light" [routerLink]="['/user/login']">เข้าสู่ระบบ</a>
+                <div class="row ">
+                    <div class="col s12 center ">
+                        <a class="waves-effect waves-light " [routerLink]="[ '/user/login'] ">เข้าสู่ระบบ</a>
                     </div>
                 </div>
             </form>

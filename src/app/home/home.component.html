@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">
+                        ตารางแสดง user
+                    </span>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="col s9  ">
+                                <div class="input-field">
+                                    <input [(ngModel)]="serach_text" id="icon_prefix" type="text" class="validate" placeholder="ชื่อ หรือ อีเมล">
+                                    <i (click)="search()" class="material-icons prefix">search</i>
+                                </div>
+                            </div>
+                            <div class="col s3">
+                                <select class="browser-default" [(ngModel)]="mouth" (change)="search()">
+                                  <option value="" disabled selected>Choose your option</option>
+                                  <option value="1">Option 1</option>
+                                  <option value="2">Option 2</option>
+                                  <option value="3">Option 3</option>
+                                  <option value="4">Option 3</option>
+                                  <option value="5">Option 3</option>
+                                  <option value="6">Option 3</option>
+                                  <option value="7">Option 3</option>
+                                  <option value="8">Option 3</option>
+                                  <option value="9">Option 3</option>
+                                  <option value="10">Option 3</option>
+                                  <option value="11">Option 3</option>
+                                  <option value="12">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col s12">
+                            <table>
+                                <thead>
+                                    <tr>
+
+                                        <th>ชื่อ-นามสกุล</th>
+                                        <th>username</th>
+                                        <th>email</th>
+                                        <th>สร้างวันที่</th>
+                                        <th>แก้ไขล่าสุด</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr *ngFor="let item of loop;index as i">
+
+                                        <td> {{ item.name }}</td>
+                                        <td>{{ item.username }}</td>
+                                        <td>{{ item.email }}</td>
+                                        <td>{{ changedate(item.date_create) }}</td>
+                                        <td>{{ changedate(item.modifly) }}</td>
+                                        <td> <i class="material-icons" (click)="delete(item.id)">delete</i></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action" style="text-align: center;">
+                    <ul class="pagination">
+                        <li class="disabled"><a><i class="material-icons" (click)="before()">chevron_left</i></a></li>
+                        <li *ngFor="let item of Pagenav">
+                            <a>{{item.number}}</a>
+                        </li>
+                        <li class="waves-effect"><a><i class="material-icons" (click)="next()">chevron_right</i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

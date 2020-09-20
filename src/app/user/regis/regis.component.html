@@ -18,23 +18,32 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="user_id" type="text" class="validate" placeholder="ชื่อผู้ใช้หรืออีเมล">
+                        <input name="first_name" [(ngModel)]="first_name" type="text" class="validate" autocomplete="true" placeholder="ชื่อ" required>
                     </div>
                     <div class="input-field col s12">
-                        <input id="user_id" type="password" class="validate" placeholder="รหัสผ่าน">
+                        <input name="last_name" [(ngModel)]="last_name" type="text" class="validate" autocomplete="true" placeholder="นามสกุล" required>
                     </div>
                     <div class="input-field col s12">
-                        <input id="user_id" type="password" class="validate" placeholder="ยืนยันรหัสผ่าน">
+                        <input name="user_name" [(ngModel)]="user_name" type="text" class="validate" autocomplete="true" placeholder="ชื่อผู้ใช้" required>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="email" [(ngModel)]="email" type="text" class="validate" autocomplete="true" placeholder="อีเมล" required>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="password" [(ngModel)]="password" type="password" class="validate" autocomplete="true" placeholder="รหัสผ่าน" required>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="confirm_password" [(ngModel)]="confirm_password" type="password" class="validate" autocomplete="true" placeholder="ยืนยันรหัสผ่าน" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s12 center">
-                        <a class="waves-effect waves-light btn" [routerLink]="['/user/login']">สมัครสมาชิก</a>
+                        <a class="waves-effect waves-light btn" (click)="regis()">สมัครสมาชิก</a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col s12 center">
-                        <a class="waves-effect waves-light" [routerLink]="['/user/login']">เข้าสู่ระบบ</a>
+                <div class="row ">
+                    <div class="col s12 center ">
+                        <a class="waves-effect waves-light " [routerLink]="[ '/user/login']">เข้าสู่ระบบ</a>
                     </div>
                 </div>
             </form>

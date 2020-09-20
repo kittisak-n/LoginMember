@@ -4,7 +4,7 @@ import { LoginComponent } from './user/login/login.component';
 import { RegisComponent } from './user/regis/regis.component';
 import { ChengepasswordComponent } from './user/chengepassword/chengepassword.component';
 import { VerifyComponent } from './user/verify/verify.component';
-
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', redirectTo: 'user', pathMatch: 'full' }, // redirect to `first-component`
   {
@@ -28,11 +28,16 @@ const routes: Routes = [
         component: VerifyComponent
       },
       {
-        path: 'chenge',
+        path: 'chenge/:id',
         component: ChengepasswordComponent
       },
     ]
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   }
+
 
 ];
 

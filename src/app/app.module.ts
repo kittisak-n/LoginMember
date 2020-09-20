@@ -16,6 +16,10 @@ import { LoginComponent } from './user/login/login.component';
 import { RegisComponent } from './user/regis/regis.component';
 import { ChengepasswordComponent } from './user/chengepassword/chengepassword.component';
 import { VerifyComponent } from './user/verify/verify.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { ActivatedRoute } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import { VerifyComponent } from './user/verify/verify.component';
     LoginComponent,
     RegisComponent,
     ChengepasswordComponent,
-    VerifyComponent
+    VerifyComponent,
+    HomeComponent
+
   ],
   imports: [
     BrowserModule,
@@ -37,8 +43,9 @@ import { VerifyComponent } from './user/verify/verify.component';
     MatMenuModule,
     MatCheckboxModule,
     MatCardModule,
-    FormsModule
-    
+    FormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

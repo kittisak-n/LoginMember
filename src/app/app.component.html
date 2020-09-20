@@ -1,16 +1,16 @@
 <mat-sidenav-container>
 
     <mat-sidenav #sidenav>
-        <mat-nav-list>
+        <!-- <mat-nav-list>
             <div *ngFor="let item of menu">
                 <a mat-list-item [routerLink]="'/accounts'"> {{item.name}} </a>
             </div>
 
-        </mat-nav-list>
+        </mat-nav-list> -->
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar class="app-toolbar">
-            <button *ngIf="checkUser()" (click)="sidenav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <button (click)="sidenav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
               <mat-icon>menu</mat-icon>
             </button>
             <span>title</span>
